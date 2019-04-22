@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table>
+    <th>Nume</th><th>PhoneNumber</th><th>Email</th>
+    {% for person in persons %}
+    <tr><td>{{person.nume}}</td><td>{{person.phonenumber}}</td><td>{{person.mail}}</td></tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

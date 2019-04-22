@@ -34,3 +34,11 @@ def person(request):
         form = PersonForm()
 
     return render(request, 'main/contact_form.html', {'form': form})
+
+
+def persons(request):
+    if request.method == 'GET':
+        persons = Person.objects.all()
+
+
+    return render(request, 'main/persons.html', {'persons': persons})
