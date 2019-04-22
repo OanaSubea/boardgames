@@ -40,5 +40,12 @@ def persons(request):
     if request.method == 'GET':
         persons = Person.objects.all()
 
+    return render(request, 'main/persons.html', {'persons': persons}) #randeaza din nou pagina html
+
+
+def deleteperson(request, id): #aici paseaza id-ul primit in url
+    if request.method == 'GET':
+        Person.objects.all().filter(pk = int(id)).delete() #filtrez dupa primary key
+        persons = Person.objects.all()
 
     return render(request, 'main/persons.html', {'persons': persons})

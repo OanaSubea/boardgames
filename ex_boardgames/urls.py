@@ -12,5 +12,6 @@ urlpatterns = [
     path('formular_submit/', views.formular_submit, name="formular_submit"),
     path('person/', views.person, name='person'),
     path('persons/', views.persons, name='persons'),
-    #url(r'deleteperson/(?P<id>\d+)/$'
+    url(r'deleteperson/(?P<id>\d+)/$', views.deleteperson, name='deleteperson'), #r = raw, d+ = tot ce are digit dupa id, capteaza in id
+    #views.deleteperson = face legatura cu deleteperson din views
 ]
